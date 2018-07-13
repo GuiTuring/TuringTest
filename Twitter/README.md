@@ -1,4 +1,4 @@
-## How to install builds
+## how to install apps
 
 [iOS]
 
