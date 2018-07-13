@@ -42,4 +42,4 @@ Encrypt key : generated and managed by KeyStore
 
 ## What could be improved further
 
-In current implementation, images from camera are encrypted and then stored. This way might be issue with in more cases like with shorter snapshots interval and larger image size. Something like image queue could be used for buffering images from camera.
+In the current implementation, images from the camera are encrypted and then stored. This method might create problems when the snapshots interval is short and the image size is large. Something like an image queue could be used for buffering images from the camera, to handle this.
