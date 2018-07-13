@@ -35,9 +35,9 @@ UnifyID Recruiting Team
 
 The method to store secure images is to store encrypted images to internal storage on devices.
 
-Encrypt algorithm: AES
+Encryption algorithm: AES
 
-Encrypt key : generated and managed by KeyStore
+Encryption key : generated and managed by KeyStore
 
 
 ## What could be improved further
