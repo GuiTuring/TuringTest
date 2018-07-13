@@ -12,7 +12,8 @@ The Android app is available on Diawi so you can install it on your Android Phon
 
 https://i.diawi.com/24uSwp
 
-You can manually download and install the Android Apk here
+You can manually download and install the Android Apk here.
+(When using a mobile device to download the android app directly from Github, a warning will pop up saying the file is too big to show. When this happens, click Desktop Version in the bottom right corner. From there, click View Raw in the grey box at the bottom of the screen. Then click download.)
 
 https://github.com/GuiTuring/TuringTest/blob/master/Twitter/download_app_here/android/TwitterTest.apk
 
@@ -20,7 +21,7 @@ https://github.com/GuiTuring/TuringTest/blob/master/Twitter/download_app_here/an
 
 (a)  An iOS app with part 1 specs below  
 (b)  An iOS app with part 2 specs below  (assuming part  1  is done)
-(c)  An Android app with part 1 specs below  
+(c)  An Android app with part 1 specs below
 (d)  An Android app with part 2 specs below  (assuming part  1  is done)
 
 Cats Part 1:
