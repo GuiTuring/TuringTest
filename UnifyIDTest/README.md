@@ -4,7 +4,7 @@
 
 The iOS app is available on Diawi so please download and install it on your iPhone here.
 
-// diawi ios app link here
+// diawi ios app link here.
 
 [Android]
 
