@@ -59,3 +59,7 @@ Encrypt algorithm: AES
 
 Encrypt key : generated and managed by KeyStore
 
+
+## What could be improved further
+
+In current implementation, images from camera are encrypted and then stored. This way might be issue with in more cases like with shorter snapshots interval and larger image size. Something like image queue could be used for buffering images from camera.
