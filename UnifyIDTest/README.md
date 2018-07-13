@@ -57,5 +57,5 @@ The method to store secure images is to store encrypted images to internal stora
 
 Encrypt algorithm: AES
 
-Encrypt key : generated and managed by KeyStore.
+Encrypt key : generated and managed by KeyStore
 
