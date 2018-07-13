@@ -8,8 +8,7 @@ Available soon
 
 [Android]
 
-- Requirement
-Android OS 6.0 (API 23+)
+- Requirement : Android OS 6.0 (API 23+)
 
 
 The Android app is available on Diawi so you can install it on your Android Phone here.
@@ -47,3 +46,12 @@ your email timestamp or your last commit in that repo.
 Best of luck.
 UnifyID Recruiting Team
 
+## Development tools and languages
+
+- iOS: Xcode 9 / Swift 3.0
+- Android: Android Studio 3.1 /Java
+
+## How to store images securely 
+The method to store secure images is to store encrypted images to internal storage on devices.
+Encrypt algorithm: AES
+Encrypt key : generated and managed by KeyStore
