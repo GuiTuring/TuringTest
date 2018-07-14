@@ -191,18 +191,28 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
 		let image = info[UIImagePickerControllerOriginalImage]
-		capturedImages.append(image as! UIImage)
+        capturedImages.append(image as! UIImage)
 		
         let imagePath = String(format: "image_%d", arguments: [capturedImages.count])
         let imageData = UIImagePNGRepresentation(image as! UIImage)
         
         var encryptedData: Data? = nil
         
+//        var decryptedData: Data? = nil
+        
         do {
             encryptedData = try imageData?.aes256Encrypt(withKey: self.password!, initializationVector: self.iv)
+            
+//            decryptedData = try encryptedData?.aes256Decrypt(withKey: self.password!, initializationVector: self.iv)
         } catch let error as NSError {
             print("\(error)")
         }
+        
+//        var decryptedImage: UIImage? = nil
+//        decryptedImage = UIImage(data: decryptedData!)
+//        capturedImages.append(decryptedImage!)
+        
+//        print(decryptedImage)
         
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsDirectory.appendingPathComponent(imagePath)
