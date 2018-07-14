@@ -17,6 +17,8 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
     
     var password: String?
     
+    var iv: Data!
+    
 	// MARK: - View Life Cycle
 	
 	override func viewDidLoad() {
@@ -24,16 +26,20 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
 
 		imagePickerController.modalPresentationStyle = .currentContext
 		imagePickerController.delegate = self
-
-        let password = RNCryptor.randomData(ofLength: 100_000_000)
-
-        let retrievedString: String? = KeychainWrapper.standard.string(forKey: "ImpageKey")
-        if ( !retrievedString?.isEmpty() ){
-            self.password = retrievedString
+       
+        
+        // generate password or get it from keychain
+        let rndString = self.randomString(length: 10)
+        let retrievedString: String? = KeychainWrapper.standard.string(forKey: "UnifyIDKey")
+        if retrievedString == nil || (retrievedString?.isEmpty)! {
+            KeychainWrapper.standard.set(rndString, forKey: "UnifyIDKey")
+            self.password = rndString
         }
         else{
-            let saveSuccessful: Bool = KeychainWrapper.standard.set(self.password, forKey: "ImpageKey")
-        }        
+            self.password = retrievedString
+        }
+        
+        self.iv = Data.generateInitializationVector()
 
 		// Remove the camera button if the camera is not currently available.
 		if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
@@ -44,6 +50,22 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
     }
 
 	fileprivate func finishAndUpdate() {
@@ -158,7 +180,6 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
 	@IBAction func startTakingPicturesAtIntervals(_ sender: UIBarButtonItem) {
 		// Change the button to represent "Stop" taking pictures.
 		startStopButton?.title = NSLocalizedString("Stop", comment: "Title for overlay view controller start/stop button")
-//        startStopButton?.action = #selector(stopTakingPicturesAtIntervals)
 		
 		// Start taking pictures right away.
 		cameraTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
@@ -172,10 +193,26 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
 		let image = info[UIImagePickerControllerOriginalImage]
 		capturedImages.append(image as! UIImage)
 		
-        let imagePath = "image_" + capturedImages.count
-        let encryptedImage = RNCryptor.encrypt(data: image, withPassword: self.password)
-        let filename = getDocumentsDirectory().appendingPathComponent( imagePath )
-        try? encryptedImage.write(to: filename)
+        let imagePath = String(format: "image_%d", arguments: [capturedImages.count])
+        let imageData = UIImagePNGRepresentation(image as! UIImage)
+        
+        var encryptedData: Data? = nil
+        
+        do {
+            encryptedData = try imageData?.aes256Encrypt(withKey: self.password!, initializationVector: self.iv)
+        } catch let error as NSError {
+            print("\(error)")
+        }
+        
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = documentsDirectory.appendingPathComponent(imagePath)
+
+        do {
+            try encryptedData?.write(to: fileURL)
+            print("file saved")
+        } catch {
+            print("error saving file:", error)
+        }
         
         if ( capturedImages.count >= 10 ){
             cameraTimer.invalidate()

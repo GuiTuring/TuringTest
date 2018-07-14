@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185E89E920F9479B009132B7 /* APEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E89E820F9479B009132B7 /* APEncrypt.swift */; };
 		185E89EF20F94B4C009132B7 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E89EC20F94B4B009132B7 /* KeychainItemAccessibility.swift */; };
 		185E89F020F94B4C009132B7 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E89EE20F94B4B009132B7 /* KeychainWrapper.swift */; };
+		185E89F820F97458009132B7 /* Data+MyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E89F520F97458009132B7 /* Data+MyExtensions.swift */; };
+		185E89F920F97458009132B7 /* NSData+MyExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 185E89F620F97458009132B7 /* NSData+MyExtensions.m */; };
 		5320B8571AFD59C0008854DF /* APLAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320B8561AFD59C0008854DF /* APLAppDelegate.swift */; };
 		5320B8591AFD59C0008854DF /* APLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320B8581AFD59C0008854DF /* APLViewController.swift */; };
 		53A0CE4B1FBCC15700083090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A0CE471FBCC15600083090 /* LaunchScreen.storyboard */; };
@@ -19,16 +20,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		185E89E820F9479B009132B7 /* APEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APEncrypt.swift; sourceTree = "<group>"; };
 		185E89EC20F94B4B009132B7 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		185E89ED20F94B4B009132B7 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftKeychainWrapper.h; sourceTree = "<group>"; };
 		185E89EE20F94B4B009132B7 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
-		185E89F120F9510F009132B7 /* RNCryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
-		5320B8511AFD59C0008854DF /* PhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185E89F420F97457009132B7 /* UnifyID_iOSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnifyID_iOSTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		185E89F520F97458009132B7 /* Data+MyExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+MyExtensions.swift"; sourceTree = "<group>"; };
+		185E89F620F97458009132B7 /* NSData+MyExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MyExtensions.m"; sourceTree = "<group>"; };
+		185E89F720F97458009132B7 /* NSData+MyExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MyExtensions.h"; sourceTree = "<group>"; };
+		185E89FA20F97558009132B7 /* CRDCryptMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRDCryptMobile.h; sourceTree = "<group>"; };
+		5320B8511AFD59C0008854DF /* UnifyID_iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnifyID_iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5320B8551AFD59C0008854DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5320B8561AFD59C0008854DF /* APLAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APLAppDelegate.swift; sourceTree = "<group>"; };
 		5320B8581AFD59C0008854DF /* APLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APLViewController.swift; sourceTree = "<group>"; };
-		5343B7E81FE1A12B00EA3B2E /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		53A0CE481FBCC15600083090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53A0CE4A1FBCC15700083090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53A851361FE1D2B90003FE24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -49,8 +52,7 @@
 		5320B8481AFD59C0008854DF = {
 			isa = PBXGroup;
 			children = (
-				5343B7E81FE1A12B00EA3B2E /* ReadMe.md */,
-				5320B8531AFD59C0008854DF /* PhotoPicker */,
+				5320B8531AFD59C0008854DF /* UnifyID_iOSTest */,
 				5320B8521AFD59C0008854DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,24 +60,27 @@
 		5320B8521AFD59C0008854DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5320B8511AFD59C0008854DF /* PhotoPicker.app */,
+				5320B8511AFD59C0008854DF /* UnifyID_iOSTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5320B8531AFD59C0008854DF /* PhotoPicker */ = {
+		5320B8531AFD59C0008854DF /* UnifyID_iOSTest */ = {
 			isa = PBXGroup;
 			children = (
-				185E89F120F9510F009132B7 /* RNCryptor.h */,
+				185E89FA20F97558009132B7 /* CRDCryptMobile.h */,
+				185E89F520F97458009132B7 /* Data+MyExtensions.swift */,
+				185E89F720F97458009132B7 /* NSData+MyExtensions.h */,
+				185E89F620F97458009132B7 /* NSData+MyExtensions.m */,
 				185E89EC20F94B4B009132B7 /* KeychainItemAccessibility.swift */,
 				185E89EE20F94B4B009132B7 /* KeychainWrapper.swift */,
 				185E89ED20F94B4B009132B7 /* SwiftKeychainWrapper.h */,
 				5320B8561AFD59C0008854DF /* APLAppDelegate.swift */,
 				5320B8581AFD59C0008854DF /* APLViewController.swift */,
-				185E89E820F9479B009132B7 /* APEncrypt.swift */,
 				5320B8541AFD59C0008854DF /* Supporting Files */,
+				185E89F420F97457009132B7 /* UnifyID_iOSTest-Bridging-Header.h */,
 			);
-			path = PhotoPicker;
+			path = UnifyID_iOSTest;
 			sourceTree = "<group>";
 		};
 		5320B8541AFD59C0008854DF /* Supporting Files */ = {
@@ -93,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5320B8501AFD59C0008854DF /* PhotoPicker */ = {
+		5320B8501AFD59C0008854DF /* UnifyID_iOSTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5320B8721AFD59C0008854DF /* Build configuration list for PBXNativeTarget "PhotoPicker" */;
+			buildConfigurationList = 5320B8721AFD59C0008854DF /* Build configuration list for PBXNativeTarget "UnifyID_iOSTest" */;
 			buildPhases = (
 				5320B84D1AFD59C0008854DF /* Sources */,
 				5320B84E1AFD59C0008854DF /* Frameworks */,
@@ -105,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = PhotoPicker;
+			name = UnifyID_iOSTest;
 			productName = SimpleApp;
-			productReference = 5320B8511AFD59C0008854DF /* PhotoPicker.app */;
+			productReference = 5320B8511AFD59C0008854DF /* UnifyID_iOSTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,17 +123,17 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					5320B8501AFD59C0008854DF = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = T6BS3986DN;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
-			buildConfigurationList = 5320B84C1AFD59C0008854DF /* Build configuration list for PBXProject "PhotoPicker" */;
+			buildConfigurationList = 5320B84C1AFD59C0008854DF /* Build configuration list for PBXProject "UnifyID_iOSTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -141,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5320B8501AFD59C0008854DF /* PhotoPicker */,
+				5320B8501AFD59C0008854DF /* UnifyID_iOSTest */,
 			);
 		};
 /* End PBXProject section */
@@ -165,11 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185E89E920F9479B009132B7 /* APEncrypt.swift in Sources */,
 				185E89EF20F94B4C009132B7 /* KeychainItemAccessibility.swift in Sources */,
 				5320B8591AFD59C0008854DF /* APLViewController.swift in Sources */,
 				5320B8571AFD59C0008854DF /* APLAppDelegate.swift in Sources */,
+				185E89F920F97458009132B7 /* NSData+MyExtensions.m in Sources */,
 				185E89F020F94B4C009132B7 /* KeychainWrapper.swift in Sources */,
+				185E89F820F97458009132B7 /* Data+MyExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,12 +221,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -268,12 +276,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -306,11 +316,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = T6BS3986DN;
-				INFOPLIST_FILE = "$(SRCROOT)/PhotoPicker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/UnifyID_iOSTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.PhotoPicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnifyID_iOSTest/UnifyID_iOSTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,11 +334,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = T6BS3986DN;
-				INFOPLIST_FILE = "$(SRCROOT)/PhotoPicker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/UnifyID_iOSTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.PhotoPicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnifyID_iOSTest/UnifyID_iOSTest-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -335,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5320B84C1AFD59C0008854DF /* Build configuration list for PBXProject "PhotoPicker" */ = {
+		5320B84C1AFD59C0008854DF /* Build configuration list for PBXProject "UnifyID_iOSTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5320B8701AFD59C0008854DF /* Debug */,
@@ -344,7 +359,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5320B8721AFD59C0008854DF /* Build configuration list for PBXNativeTarget "PhotoPicker" */ = {
+		5320B8721AFD59C0008854DF /* Build configuration list for PBXNativeTarget "UnifyID_iOSTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5320B8731AFD59C0008854DF /* Debug */,
