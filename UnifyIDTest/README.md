@@ -42,7 +42,7 @@ The method to store secure images is to store encrypted images to internal stora
 
 Encryption algorithm: AES
 
-Encryption key : generated and managed by KeyStore
+Encryption key : generated and managed by KeyStore(Android) and KeyChain(iOS)
 
 
 ## What could be improved further
