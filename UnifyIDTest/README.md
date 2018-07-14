@@ -28,7 +28,7 @@ UnifyID Recruiting Team
 
 ## Development tools and languages
 
-- iOS: Xcode 9 / Swift 3.0
+- iOS: Xcode 9 / Swift 4.1
 - Android: Android Studio 3.1 /Java
 
 ## How to store images securely 
