@@ -54,12 +54,12 @@ In the current implementation, images from the camera are encrypted and then sto
 
 [iOS]
 
-commit: https://github.com/GuiTuring/TuringTest/commit/6c2fab06d496ca1b3c2e96031e4bb626835f7580
+Commit: https://github.com/GuiTuring/TuringTest/commit/6c2fab06d496ca1b3c2e96031e4bb626835f7580
 
-timestamp: 2018-07-14 08:22:02 + 0800
+Timestamp: 2018-07-14 08:22:02 + 0800
 
 [Android]
 
-commit: https://github.com/GuiTuring/TuringTest/commit/3cbde3ac3e8e2ec783f45a08ec11000d701edeab
+Commit: https://github.com/GuiTuring/TuringTest/commit/3cbde3ac3e8e2ec783f45a08ec11000d701edeab
 
-timestamp: 2018-07-14 06:27:09 + 0800
+Timestamp: 2018-07-14 06:27:09 + 0800
