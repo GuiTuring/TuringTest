@@ -1,5 +1,10 @@
 ## How to install apps
 
+The Android APK is available for testing at:
+
+https://github.com/GuiTuring/TuringTest/blob/master/UnifyIDTest/download_app_here/android/UnifyIDTest.apk
+
+
 ## Things to do:
 
 For this challenge, we’re building a facial recognition platform that's running on mobile devices.
