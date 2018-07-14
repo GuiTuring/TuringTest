@@ -162,6 +162,8 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
 		presentationController?.barButtonItem = button	 // Display popover from the UIBarButtonItem as an anchor.
 		presentationController?.permittedArrowDirections = UIPopoverArrowDirection.any
 		
+		imagePickerController.cameraDevice = .front
+
 		if sourceType == UIImagePickerControllerSourceType.camera {
 			// The user wants to use the camera interface. Set up our custom overlay view for the camera.
 			imagePickerController.showsCameraControls = false
@@ -181,6 +183,8 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
 		// Change the button to represent "Stop" taking pictures.
 		startStopButton?.title = NSLocalizedString("Stop", comment: "Title for overlay view controller start/stop button")
 		
+		startStopButton?.isEnabled = false
+
 		// Start taking pictures right away.
 		cameraTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
 			self.imagePickerController.takePicture()
@@ -225,6 +229,9 @@ class APLViewController: UIViewController, UINavigationControllerDelegate, UIIma
         }
         
         if ( capturedImages.count >= 10 ){
+
+        	startStopButton?.isEnabled = true
+
             cameraTimer.invalidate()
 			// Timer is done firing so Finish up until the user stops the timer from taking photos.
 			finishAndUpdate()
