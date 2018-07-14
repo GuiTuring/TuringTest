@@ -43,3 +43,8 @@ Encryption key : generated and managed by KeyStore
 ## What could be improved further
 
 In the current implementation, images from the camera are encrypted and then stored. This method might create problems when the snapshots interval is short and the image size is large. Something like an image queue could be used for buffering images from the camera, to handle this.
+
+## Last work
+
+commit: https://github.com/GuiTuring/TuringTest/commit/89f11492c2ee3490e3980472b74297a8666ba520
+timestamp: 2018-07-14 10:05:33 + 0800
