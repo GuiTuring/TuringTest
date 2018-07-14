@@ -47,4 +47,5 @@ In the current implementation, images from the camera are encrypted and then sto
 ## Last work
 
 commit: https://github.com/GuiTuring/TuringTest/commit/89f11492c2ee3490e3980472b74297a8666ba520
+
 timestamp: 2018-07-14 10:05:33 + 0800
