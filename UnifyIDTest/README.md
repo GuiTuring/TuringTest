@@ -1,26 +1,5 @@
 ## How to install apps
 
-[iOS]
-
-The iOS app is available on Diawi so please download and install it on your iPhone here.
-
-Available soon
-
-[Android]
-
-- Requirement
-Android OS 6.0 (API 23+)
-
-
-The Android app is available on Diawi so you can install it on your Android Phone here.
-
-Available soon
-
-You can manually download and install the Android Apk here.
-(When using a mobile device to download the android app directly from Github, a warning will pop up saying the file is too big to show. When this happens, click Desktop Version in the bottom right corner. From there, click View Raw in the grey box at the bottom of the screen. Then click download.)
-
-https://github.com/GuiTuring/TuringTest/blob/master/UnifyIDTest/download_app_here/android/UnifyIDTest.apk
-
 ## Things to do:
 
 For this challenge, we’re building a facial recognition platform that's running on mobile devices.
@@ -47,3 +26,20 @@ your email timestamp or your last commit in that repo.
 Best of luck.
 UnifyID Recruiting Team
 
+## Development tools and languages
+
+- iOS: Xcode 9 / Swift 3.0
+- Android: Android Studio 3.1 /Java
+
+## How to store images securely 
+
+The method to store secure images is to store encrypted images to internal storage on devices.
+
+Encryption algorithm: AES
+
+Encryption key : generated and managed by KeyStore
+
+
+## What could be improved further
+
+In the current implementation, images from the camera are encrypted and then stored. This method might create problems when the snapshots interval is short and the image size is large. Something like an image queue could be used for buffering images from the camera, to handle this.
